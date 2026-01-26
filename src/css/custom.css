@@ -100,7 +100,7 @@
   grid-template-columns: auto 1fr auto !important;
   align-items: center !important;
   width: 100% !important;
-  position: relative;
+  position: relative !important;
   gap: 1rem;
 }
 
@@ -114,29 +114,28 @@
 
 /* Left navbar items container - keep on left with brand and toggle */
 /* Target CSS module class using attribute selector */
+/* Remove position: relative so Documentation link can position relative to navbar__inner */
 .navbar [class*="navbar-left"],
 .navbar .navbar__items--left {
   display: flex !important;
   align-items: center;
   gap: 1rem;
-  position: relative;
+  position: static !important;
   z-index: 2;
 }
 
-/* Center the Documentation link specifically - it's inside the left container */
-/* Position it absolutely in the center of the navbar (relative to navbar__inner) */
-.navbar .navbar__inner {
-  position: relative;
-}
-
+/* Center the Documentation link - position absolutely relative to navbar__inner */
+/* navbar__inner has position: relative, so this will position relative to it */
 .navbar [class*="navbar-left"] .navbar__item[href="/"],
 .navbar .navbar__items--left .navbar__item[href="/"] {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  white-space: nowrap;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 10 !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal) !important;
 }
 
 /* Ensure search/theme toggle stay on right */
