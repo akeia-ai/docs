@@ -93,23 +93,33 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Center navigation items */
-.navbar__items {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-}
-
-.navbar__items--center {
-  flex: 1;
-  justify-content: center;
-}
-
-/* Ensure navbar layout: logo left, items center, search right */
+/* Center navigation items - CSS approach since Docusaurus only supports left/right */
 .navbar__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
+}
+
+/* Center the left-side items */
+.navbar__items--left {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure logo stays on left */
+.navbar__brand {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure search/theme toggle stay on right */
+.navbar__items--right {
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar__item {
