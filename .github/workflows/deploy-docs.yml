@@ -33,6 +33,7 @@ jobs:
       
       - name: Install dependencies
         run: npm install
+        continue-on-error: false
       
       - name: Commit package-lock.json if generated
         run: |
@@ -40,12 +41,21 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add package-lock.json
-            git diff --staged --quiet || git commit -m "chore: add package-lock.json [skip ci]"
-            git push || echo "package-lock.json already committed or push failed"
+            if ! git diff --staged --quiet; then
+              git commit -m "chore: add package-lock.json [skip ci]" || echo "Commit failed or already committed"
+              git push || echo "Push failed - will retry on next run"
+            else
+              echo "package-lock.json already committed"
+            fi
+          else
+            echo "package-lock.json not found after npm install"
+            exit 1
           fi
+        continue-on-error: true  # Don't fail the workflow if commit fails
       
       - name: Build Docusaurus
         run: npm run build
+        continue-on-error: false
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
