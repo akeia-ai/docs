@@ -237,74 +237,62 @@ a:hover {
 }
 
 /* Theme toggle button styling - match Documentation green color */
-/* Target all possible theme toggle selectors in Docusaurus */
-.navbar__item--theme-toggle,
-.navbar__item--theme-toggle button,
-.navbar__item--theme-toggle .navbar__link,
-.navbar__item[title*="theme"],
-.navbar__item[title*="mode"],
-.navbar__item[aria-label*="theme"],
-.navbar__item[aria-label*="mode"] {
+/* Use attribute selectors to target CSS module classes (hashes change on each build) */
+button[class*="toggleButton"],
+[class*="colorModeToggle"] button,
+button[aria-label*="Switch between dark and light mode"] {
   color: var(--ifm-color-primary) !important;
 }
 
-.navbar__item--theme-toggle:hover,
-.navbar__item--theme-toggle button:hover,
-.navbar__item--theme-toggle .navbar__link:hover {
+button[class*="toggleButton"]:hover,
+[class*="colorModeToggle"] button:hover,
+button[aria-label*="Switch between dark and light mode"]:hover {
   color: var(--ifm-color-primary-dark) !important;
   opacity: 0.8;
 }
 
-/* Target the SVG icon inside the theme toggle - comprehensive selectors */
-.navbar__item--theme-toggle svg,
-.navbar__item--theme-toggle button svg,
-.navbar__item--theme-toggle .navbar__link svg,
-.navbar__item[title*="theme"] svg,
-.navbar__item[aria-label*="theme"] svg {
+/* Target the SVG icons inside the theme toggle */
+button[class*="toggleButton"] svg,
+[class*="colorModeToggle"] button svg,
+button[aria-label*="Switch between dark and light mode"] svg {
   fill: var(--ifm-color-primary) !important;
   stroke: var(--ifm-color-primary) !important;
   color: var(--ifm-color-primary) !important;
 }
 
-.navbar__item--theme-toggle:hover svg,
-.navbar__item--theme-toggle button:hover svg,
-.navbar__item--theme-toggle .navbar__link:hover svg {
+button[class*="toggleButton"]:hover svg,
+[class*="colorModeToggle"] button:hover svg,
+button[aria-label*="Switch between dark and light mode"]:hover svg {
   fill: var(--ifm-color-primary-dark) !important;
   stroke: var(--ifm-color-primary-dark) !important;
   color: var(--ifm-color-primary-dark) !important;
 }
 
 /* Dark mode theme toggle styling */
-[data-theme='dark'] .navbar__item--theme-toggle,
-[data-theme='dark'] .navbar__item--theme-toggle button,
-[data-theme='dark'] .navbar__item--theme-toggle .navbar__link,
-[data-theme='dark'] .navbar__item[title*="theme"],
-[data-theme='dark'] .navbar__item[title*="mode"],
-[data-theme='dark'] .navbar__item[aria-label*="theme"],
-[data-theme='dark'] .navbar__item[aria-label*="mode"] {
+[data-theme='dark'] button[class*="toggleButton"],
+[data-theme='dark'] [class*="colorModeToggle"] button,
+[data-theme='dark'] button[aria-label*="Switch between dark and light mode"] {
   color: var(--ifm-color-primary) !important;
 }
 
-[data-theme='dark'] .navbar__item--theme-toggle:hover,
-[data-theme='dark'] .navbar__item--theme-toggle button:hover,
-[data-theme='dark'] .navbar__item--theme-toggle .navbar__link:hover {
+[data-theme='dark'] button[class*="toggleButton"]:hover,
+[data-theme='dark'] [class*="colorModeToggle"] button:hover,
+[data-theme='dark'] button[aria-label*="Switch between dark and light mode"]:hover {
   color: var(--ifm-color-primary-light) !important;
   opacity: 0.8;
 }
 
-[data-theme='dark'] .navbar__item--theme-toggle svg,
-[data-theme='dark'] .navbar__item--theme-toggle button svg,
-[data-theme='dark'] .navbar__item--theme-toggle .navbar__link svg,
-[data-theme='dark'] .navbar__item[title*="theme"] svg,
-[data-theme='dark'] .navbar__item[aria-label*="theme"] svg {
+[data-theme='dark'] button[class*="toggleButton"] svg,
+[data-theme='dark'] [class*="colorModeToggle"] button svg,
+[data-theme='dark'] button[aria-label*="Switch between dark and light mode"] svg {
   fill: var(--ifm-color-primary) !important;
   stroke: var(--ifm-color-primary) !important;
   color: var(--ifm-color-primary) !important;
 }
 
-[data-theme='dark'] .navbar__item--theme-toggle:hover svg,
-[data-theme='dark'] .navbar__item--theme-toggle button:hover svg,
-[data-theme='dark'] .navbar__item--theme-toggle .navbar__link:hover svg {
+[data-theme='dark'] button[class*="toggleButton"]:hover svg,
+[data-theme='dark'] [class*="colorModeToggle"] button:hover svg,
+[data-theme='dark'] button[aria-label*="Switch between dark and light mode"]:hover svg {
   fill: var(--ifm-color-primary-light) !important;
   stroke: var(--ifm-color-primary-light) !important;
   color: var(--ifm-color-primary-light) !important;
