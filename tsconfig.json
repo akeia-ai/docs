@@ -1,0 +1,20 @@
+{
+  // This file is not used when using @docusaurus/core with TypeScript support.
+  // It can still be used by IDEs to improve your development experience:
+  // - https://github.com/microsoft/TypeScript/wiki/TypeScript-Editor-Support
+  //
+  // To learn more about the Docusaurus TypeScript setup, visit:
+  // https://docusaurus.io/docs/typescript-support
+
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@site/*": ["./*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}
