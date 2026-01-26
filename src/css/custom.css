@@ -31,6 +31,8 @@
   
   /* Typography */
   --ifm-font-family-base: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-family-monospace: 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  --ifm-heading-font-family: var(--ifm-font-family-base); /* Ensure headings use Montserrat */
   --ifm-font-weight-normal: 400;
   --ifm-font-weight-semibold: 600;
   --ifm-font-weight-bold: 700;
@@ -126,6 +128,7 @@
 
 /* Center the Documentation link - position absolutely relative to navbar__inner */
 /* navbar__inner has position: relative, so this will position relative to it */
+/* Match font size from website nav links (1.125rem / 18px) */
 .navbar [class*="navbar-left"] .navbar__item[href="/"],
 .navbar .navbar__items--left .navbar__item[href="/"] {
   position: absolute !important;
@@ -136,6 +139,9 @@
   white-space: nowrap !important;
   margin: 0 !important;
   padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal) !important;
+  font-size: 1.125rem !important; /* Match website nav link size (18px) */
+  font-family: var(--ifm-font-family-base) !important; /* Ensure Montserrat */
+  font-weight: var(--ifm-font-weight-semibold) !important; /* Match website nav link weight */
 }
 
 /* Ensure search/theme toggle stay on right */
