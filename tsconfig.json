@@ -1,10 +1,13 @@
 {
-  // This file is not used when using @docusaurus/core with TypeScript support.
-  // It can still be used by IDEs to improve your development experience:
+  // This tsconfig.json is used by IDEs for TypeScript editor support and type-checking.
+  // Docusaurus uses its own internal TypeScript configuration for compilation.
   // - https://github.com/microsoft/TypeScript/wiki/TypeScript-Editor-Support
   //
   // To learn more about the Docusaurus TypeScript setup, visit:
   // https://docusaurus.io/docs/typescript-support
+  //
+  // Note: If your IDE shows a warning about "@docusaurus/tsconfig" not found,
+  // try restarting the TypeScript server. The package is installed and the config is valid.
 
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {

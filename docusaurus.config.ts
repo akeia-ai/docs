@@ -159,7 +159,7 @@ const config: Config = {
     [
       "@easyops-cn/docusaurus-search-local",
       {
-        hashed: true,
+        hashed: false, // Set to false to avoid path resolution issues on GitHub Pages
         language: ["en"],
         indexDocs: true,
         indexBlog: false,
