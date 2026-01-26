@@ -84,16 +84,71 @@ const config = {
             ],
           },
           {
-            title: 'Company',
+            title: 'Platform',
             items: [
               {
-                label: 'Home',
-                href: 'https://akeia.ai',
+                label: 'Use Cases',
+                href: 'https://akeia.ai/pages/use-cases.html',
+              },
+              {
+                label: 'Resources',
+                href: 'https://akeia.ai/pages/resources.html',
+              },
+            ],
+          },
+          {
+            title: 'About',
+            items: [
+              {
+                label: 'Company',
+                href: 'https://akeia.ai/pages/company.html',
+              },
+              {
+                label: 'Contact',
+                href: 'https://akeia.ai/pages/contact.html',
+              },
+              {
+                label: 'Insights',
+                href: 'https://akeia.ai/pages/insights.html',
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Privacy Policy',
+                href: 'https://akeia.ai/pages/privacy.html',
+              },
+              {
+                label: 'Terms of Service',
+                href: 'https://akeia.ai/pages/terms.html',
+              },
+              {
+                label: 'Security',
+                href: 'https://akeia.ai/pages/security.html',
+              },
+            ],
+          },
+          {
+            title: 'Join Us',
+            items: [
+              {
+                label: 'Community',
+                href: 'https://akeia.ai/pages/community.html',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/akeia-ai/',
+              },
+              {
+                label: 'X (Twitter)',
+                href: 'https://x.com/akeia_ai',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Akeia AI. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Akeia AI Ltd. All Rights Reserved.`,
       },
       prism: {
         theme: themes.github,
