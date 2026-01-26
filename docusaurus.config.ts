@@ -32,6 +32,9 @@ const config: Config = {
     locales: ['en'],
   },
 
+  // Trailing slash configuration - needed for search plugin with routeBasePath: '/'
+  trailingSlash: false,
+
   presets: [
     [
       'classic',
@@ -166,6 +169,8 @@ const config: Config = {
         indexPages: false,
         searchResultLimits: 8,
         searchResultContextMaxLength: 50,
+        // Explicitly set docsRouteBasePath to match routeBasePath: '/'
+        docsRouteBasePath: ["/"], // Root path
       },
     ],
   ],
