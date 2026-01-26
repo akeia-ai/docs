@@ -25,11 +25,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Setup Node (without cache)
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          # Cache disabled for first run - will be enabled after package-lock.json exists
+          cache: 'npm'  # Now enabled since package-lock.json exists
       
       - name: Install dependencies
         run: npm install
