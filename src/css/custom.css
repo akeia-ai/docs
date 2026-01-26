@@ -93,6 +93,29 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Center navigation items */
+.navbar__items {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar__items--center {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Ensure navbar layout: logo left, items center, search right */
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__item {
+  margin: 0 1rem;
+}
+
 /* Footer styling */
 .footer {
   background-color: var(--ifm-color-gray-900);
