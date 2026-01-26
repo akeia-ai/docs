@@ -59,11 +59,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Akeia AI',
-        logo: {
-          alt: 'Akeia AI Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'AKEIA',
+        hideOnScroll: false,
+        // Logo is CSS-based gradient text, no image needed
         items: [
           {
             type: 'docSidebar',
@@ -103,21 +101,19 @@ const config = {
       },
     }),
 
-  // Temporarily disabled due to babel-loader compatibility issue
-  // Will re-enable once the plugin compatibility is resolved
   plugins: [
-    // [
-    //   "@easyops-cn/docusaurus-search-local",
-    //   {
-    //     hashed: true,
-    //     language: ["en"],
-    //     indexDocs: true,
-    //     indexBlog: false,
-    //     indexPages: false,
-    //     searchResultLimits: 8,
-    //     searchResultContextMaxLength: 50,
-    //   },
-    // ],
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["en"],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+      },
+    ],
   ],
 };
 

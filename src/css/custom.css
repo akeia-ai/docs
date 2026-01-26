@@ -1,30 +1,129 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Akeia AI Custom Styling - Matching main website design
+ * Based on website deployment styling
  */
 
-/* You can override the default Infima variables here. */
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* CSS Variables - Akeia Brand Colors */
 :root {
-  --ifm-color-primary: #5D8D49;
-  --ifm-color-primary-dark: #547d42;
-  --ifm-color-primary-darker: #4f763e;
+  /* Primary Brand Colors */
+  --ifm-color-primary: #89B362;
+  --ifm-color-primary-dark: #77A65B;
+  --ifm-color-primary-darker: #5D8D49;
   --ifm-color-primary-darkest: #416133;
-  --ifm-color-primary-light: #669d50;
-  --ifm-color-primary-lighter: #6ba454;
-  --ifm-color-primary-lightest: #7bb55f;
+  --ifm-color-primary-light: #9DC369;
+  --ifm-color-primary-lighter: #CDE899;
+  --ifm-color-primary-lightest: #CDE899;
+  
+  /* Neutral Colors */
+  --ifm-color-gray-50: #F9FAFB;
+  --ifm-color-gray-100: #F3F4F6;
+  --ifm-color-gray-200: #E5E7EB;
+  --ifm-color-gray-300: #D1D5DB;
+  --ifm-color-gray-400: #9CA3AF;
+  --ifm-color-gray-500: #6B7280;
+  --ifm-color-gray-600: #4B5563;
+  --ifm-color-gray-700: #374151;
+  --ifm-color-gray-800: #1F2937;
+  --ifm-color-gray-900: #111827;
+  
+  /* Typography */
+  --ifm-font-family-base: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
+  
+  /* Background */
+  --ifm-background-color: #FFFFFF;
+  --ifm-background-surface-color: #F9FAFB;
+  
+  /* Code */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #CDE899 0%, #9DC369 25%, #89B362 50%, #77A65B 75%, #5D8D49 100%);
+  --gradient-text: linear-gradient(135deg, #89B362 0%, #5D8D49 100%);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode colors */
 [data-theme='dark'] {
   --ifm-color-primary: #9DC369;
-  --ifm-color-primary-dark: #8db359;
-  --ifm-color-primary-darker: #85aa54;
-  --ifm-color-primary-darkest: #6d8c45;
-  --ifm-color-primary-light: #add379;
-  --ifm-color-primary-lighter: #b5d77e;
-  --ifm-color-primary-lightest: #cde899;
+  --ifm-color-primary-dark: #89B362;
+  --ifm-color-primary-darker: #77A65B;
+  --ifm-color-primary-darkest: #5D8D49;
+  --ifm-color-primary-light: #CDE899;
+  --ifm-color-primary-lighter: #CDE899;
+  --ifm-color-primary-lightest: #CDE899;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Logo styling - CSS-based gradient text like main website */
+.navbar__brand {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: linear-gradient(135deg, #CDE899 0%, #9DC369 25%, #89B362 50%, #77A65B 75%, #5D8D49 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.navbar__brand:hover {
+  background: linear-gradient(135deg, #5D8D49 0%, #77A65B 25%, #89B362 50%, #9DC369 75%, #CDE899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Remove logo image if present */
+.navbar__logo {
+  display: none;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--ifm-background-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--ifm-color-gray-900);
+}
+
+/* Button styling */
+.button--primary {
+  background: linear-gradient(135deg, #89B362 0%, #5D8D49 100%);
+  border: none;
+  font-weight: 600;
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, #5D8D49 0%, #77A65B 25%, #89B362 50%, #9DC369 75%, #CDE899 100%);
+}
+
+/* Link styling */
+a {
+  color: var(--ifm-color-primary);
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+/* Search box styling */
+.DocSearch-Button {
+  border-radius: 0.375rem;
+  border: 1px solid var(--ifm-color-gray-300);
+}
+
+.DocSearch-Button:hover {
+  border-color: var(--ifm-color-primary);
 }
