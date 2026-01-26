@@ -14,6 +14,7 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   docs: [
+    'index', // Homepage with slug: /
     'getting-started/introduction',
     {
       type: 'category',
