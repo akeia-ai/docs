@@ -94,6 +94,7 @@
 }
 
 /* Center navigation items - Override Docusaurus defaults with higher specificity */
+/* Use attribute selectors for CSS module classes */
 .navbar .navbar__inner {
   display: grid !important;
   grid-template-columns: auto 1fr auto !important;
@@ -111,18 +112,36 @@
   z-index: 2;
 }
 
-/* Center the left-side items (Documentation) in the middle column */
+/* Left navbar items container - keep on left with brand and toggle */
+/* Target CSS module class using attribute selector */
+.navbar [class*="navbar-left"],
 .navbar .navbar__items--left {
-  grid-column: 2;
-  justify-self: center;
   display: flex !important;
   align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Center the Documentation link specifically - it's inside the left container */
+/* Position it absolutely in the center of the navbar (relative to navbar__inner) */
+.navbar .navbar__inner {
+  position: relative;
+}
+
+.navbar [class*="navbar-left"] .navbar__item[href="/"],
+.navbar .navbar__items--left .navbar__item[href="/"] {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
-  margin: 0 !important;
-  padding: 0 !important;
+  white-space: nowrap;
 }
 
 /* Ensure search/theme toggle stay on right */
+/* Target CSS module class using attribute selector */
+.navbar [class*="navbar-right"],
 .navbar .navbar__items--right {
   grid-column: 3;
   justify-self: end;
