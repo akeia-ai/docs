@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Knowledge Base',
-      items: ['kb/example'],
+      items: ['kb/example', 'kb/pipeline-test_260126'],
     },
   ],
 };
