@@ -9,9 +9,10 @@
  Create as many sidebars as you want.
  */
 
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+// @ts-check
 
-const sidebars: SidebarsConfig = {
+/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   docs: [
     'getting-started/introduction',
@@ -23,4 +24,4 @@ const sidebars: SidebarsConfig = {
   ],
 };
 
-export default sidebars;
+module.exports = sidebars;
