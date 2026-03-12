@@ -25,3 +25,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Local Cursor agent instructions (per-developer; do not commit)
+AGENTS.md
+
